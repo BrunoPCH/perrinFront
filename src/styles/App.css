@@ -1,0 +1,30 @@
+#root {
+  /* max-width: 1280px; */
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+
+  --orange-pal: #d96326;
+  --yellow-pal: #f29d35;
+  --brown-pal: #591914;
+  --brown-dark-pal: #3d0f07;
+  --teal-pal: #018380;
+}
+
+body {
+  background: rgb(217, 99, 38);
+  background: linear-gradient(
+    180deg,
+    rgba(217, 99, 38, 1) 80%,
+    rgba(109, 50, 19, 1) 100%
+  );
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
