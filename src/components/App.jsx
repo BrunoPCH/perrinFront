@@ -16,11 +16,11 @@ import {
 // COMPONETS
 import Logo from "./Logo.jsx";
 import BookingButton from "./BookingButton.jsx";
-
+import Header from "../components/Header.jsx"
 function App() {
   return (
     <>
-      {/* <Header /> */}
+       <Header />
 
       <div>
         <Logo />

@@ -10,7 +10,7 @@ function Logo() {
       src={logoImage}
       className="logo-home"
       alt="Perrin Logo"
-      style={{ width: "100%" }}
+      
     />
   );
 }

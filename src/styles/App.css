@@ -1,8 +1,8 @@
 #root {
-  /* max-width: 1280px; */
-  max-width: 600px;
+  max-width: 1280px; 
+  width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
 
   --orange-pal: #d96326;
@@ -21,10 +21,4 @@ body {
   );
 }
 
-.card {
-  padding: 2em;
-}
 
-.read-the-docs {
-  color: #888;
-}

@@ -1,4 +1,7 @@
 .logo-home {
   width: 100%;
-  margin-bottom: 3rem;
+  max-width: 200px;
+  margin: 3rem auto;
+  text-align: center;
+  display: block;
 }
