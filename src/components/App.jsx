@@ -4,31 +4,31 @@ import "../styles/App.css";
 // LIBRARIES
 
 // React Router DOM
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Routes,
-  Route,
-  Link,
-  BrowserRouter,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // COMPONETS
-import Logo from "./Logo.jsx";
-import BookingButton from "./BookingButton.jsx";
-import Header from "../components/Header.jsx"
+// import Header from "../components/Header.jsx";
+import LayoutWithHeader from "./LayoutWithHeader.jsx";
+import LayoutWithoutHeader from "./LayoutWithoutHeader.jsx";
+import Home from "./Home.jsx";
+import Login from "./Login.jsx";
+import NotFound from "./NotFound.jsx";
+import Register from "./Register.jsx";
+
 function App() {
   return (
-    <>
-       <Header />
-
-      <div>
-        <Logo />
-        <BookingButton />
-      </div>
-
+    <BrowserRouter>
+      <Routes>
+        <Route element={<LayoutWithoutHeader />}>
+          <Route path="/" exact element={<Home />} />
+          <Route path="/login" exact element={<Login />} />
+          <Route path="*" element={<NotFound />} />
+          <Route path="/register" element={<Register />} />
+        </Route>
+        <Route element={<LayoutWithHeader />}></Route>
+      </Routes>
       {/* <Footer /> */}
-    </>
+    </BrowserRouter>
   );
 }
 

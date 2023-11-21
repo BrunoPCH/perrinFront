@@ -1,9 +1,14 @@
 #root {
-  max-width: 1280px; 
+  max-width: 500px;
   width: 100%;
   margin: 0 auto;
   padding: 0;
   text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
 
   --orange-pal: #d96326;
   --yellow-pal: #f29d35;
@@ -11,7 +16,12 @@
   --brown-dark-pal: #3d0f07;
   --teal-pal: #018380;
 }
-
+.flex-center {
+  align-items: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
 body {
   background: rgb(217, 99, 38);
   background: linear-gradient(
@@ -20,5 +30,3 @@ body {
     rgba(109, 50, 19, 1) 100%
   );
 }
-
-

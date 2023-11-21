@@ -1,0 +1,12 @@
+button {
+  border-radius: 50px;
+  border: 4px solid var(--yellow-pal);
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: var(--brown-pal);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
