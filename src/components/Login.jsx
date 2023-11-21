@@ -25,6 +25,7 @@ const Login = () => {
           pattern={"\\w{8,20}"}
           required={"required"}
           placeholder={""}
+          autocomplete={"currentPassword"}
           inputTip={"8 carácteres alfanuméricos"}
         />
         <button type="submit" className="primaryBtn">

@@ -20,6 +20,8 @@ const Register = () => {
           type={"text"}
           name={"fullName"}
           required={"required"}
+          pattern={"[a-zA-Z áÁéÉíÍóÓúÚüÜ]{8,50}"}
+          maxLength={"50"}
           placeholder={"DougBerto Can Azuelos"}
           inputTip={"Sólo letras y espacios"}
         />
@@ -37,6 +39,7 @@ const Register = () => {
           name={"password"}
           required={"required"}
           pattern={"\\w{8,20}"}
+          maxLength={"20"}
           placeholder={"Secreto12245678"}
           inputTip={"Entre 8 y 20 caracteres sin espacios"}
         />

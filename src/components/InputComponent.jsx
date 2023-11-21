@@ -7,11 +7,13 @@ const InputComponent = ({
   id,
   name,
   pattern,
+  maxLength,
   placeholder,
   required,
   value,
   pLabel,
   inputTip,
+  autocomplete,
 }) => {
   const [show, setShow] = useState(false);
   return (
@@ -27,6 +29,8 @@ const InputComponent = ({
           placeholder={placeholder}
           required={required}
           pattern={pattern}
+          maxLength={maxLength}
+          autoComplete={autocomplete}
           onSelect={() => setShow(true)}
         />
         <img
@@ -64,6 +68,7 @@ InputComponent.propTypes = {
   value: PropTypes.string,
   pLabel: PropTypes.string.isRequired,
   inputTip: PropTypes.string,
+  autocomplete: PropTypes.string,
 };
 
 export default InputComponent;
