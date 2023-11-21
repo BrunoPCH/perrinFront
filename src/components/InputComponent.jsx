@@ -10,26 +10,28 @@ const InputComponent = ({
   maxLength,
   placeholder,
   required,
-  value,
+  // value,
   pLabel,
   inputTip,
   autocomplete,
+  defaultValue,
 }) => {
   const [show, setShow] = useState(false);
   return (
     <div className="form-item">
-      <label htmlFor={name}>{pLabel}</label>
+      <label htmlFor={id}>{pLabel}</label>
       <div className="form-item-input-container">
         <input
           className="form-item_input"
           type={type}
           id={id}
           name={name}
-          value={value}
+          // value={value}
           placeholder={placeholder}
           required={required}
           pattern={pattern}
           maxLength={maxLength}
+          defaultValue={defaultValue}
           autoComplete={autocomplete}
           onSelect={() => setShow(true)}
         />
@@ -65,10 +67,20 @@ InputComponent.propTypes = {
   pattern: PropTypes.string,
   placeholder: PropTypes.string,
   required: PropTypes.string.isRequired,
-  value: PropTypes.string,
+  defaultValue: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.bool,
+  ]),
+  // value: PropTypes.oneOfType([
+  //   PropTypes.string,
+  //   PropTypes.number,
+  //   PropTypes.bool,
+  // ]),
   pLabel: PropTypes.string.isRequired,
   inputTip: PropTypes.string,
   autocomplete: PropTypes.string,
+  maxLength: PropTypes.number,
 };
 
 export default InputComponent;
