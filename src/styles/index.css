@@ -73,6 +73,7 @@ button {
   background-color: var(--brown-pal);
   cursor: pointer;
   transition: border-color 0.25s;
+  margin-bottom: 3rem;
 }
 
 button.primaryBtn {

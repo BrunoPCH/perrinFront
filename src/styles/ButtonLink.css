@@ -9,4 +9,5 @@ button {
   background-color: var(--brown-pal);
   cursor: pointer;
   transition: border-color 0.25s;
+  border-bottom: 3rem;
 }

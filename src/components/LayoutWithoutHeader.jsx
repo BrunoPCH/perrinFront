@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 const LayoutWithoutHeader = () => {
   return (
-    <div className="flex-center">
+    <div className="">
       <Outlet />
       <Footer />
     </div>
