@@ -10,11 +10,11 @@ const InputComponent = ({
   maxLength,
   placeholder,
   required,
-  // value,
+  value,
   pLabel,
   inputTip,
   autocomplete,
-  defaultValue,
+  // defaultValue,
 }) => {
   const [show, setShow] = useState(false);
   return (
@@ -26,14 +26,14 @@ const InputComponent = ({
           type={type}
           id={id}
           name={name}
-          // value={value}
           placeholder={placeholder}
           required={required}
           pattern={pattern}
           maxLength={maxLength}
-          defaultValue={defaultValue}
+          // defaultValue={defaultValue}
           autoComplete={autocomplete}
           onSelect={() => setShow(true)}
+          onChange={value}
         />
         <img
           className="validation-icon"
@@ -67,16 +67,16 @@ InputComponent.propTypes = {
   pattern: PropTypes.string,
   placeholder: PropTypes.string,
   required: PropTypes.string.isRequired,
-  defaultValue: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-    PropTypes.bool,
-  ]),
-  // value: PropTypes.oneOfType([
+  // defaultValue: PropTypes.oneOfType([
   //   PropTypes.string,
   //   PropTypes.number,
   //   PropTypes.bool,
   // ]),
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.bool,
+  ]),
   pLabel: PropTypes.string.isRequired,
   inputTip: PropTypes.string,
   autocomplete: PropTypes.string,
@@ -84,3 +84,18 @@ InputComponent.propTypes = {
 };
 
 export default InputComponent;
+
+{
+  /* <InputComponent
+          pLabel={"Confirmar contraseña"}
+          type={"text"}
+          name={"confirmPassword"}
+          required={"required"}
+          pattern={"\\w{8,20}"}
+          maxLength={20}
+          placeholder={"Secreto12245678"}
+          inputTip={"Entre 8 y 20 caracteres sin espacios"}
+          // onChange={(e) => handleInputChange(e)}
+          id="confirmPassword"
+        /> */
+}

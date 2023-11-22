@@ -1,3 +1,168 @@
 .formulario_registro {
   width: 100%;
 }
+.form-item {
+  margin: 1.5rem 0;
+  width: 100%;
+  text-align: left;
+}
+label,
+::-webkit-input-placeholder,
+input::placeholder {
+  display: block;
+  text-align: left;
+  color: var(--brown-dark);
+  font-size: 14px;
+  line-height: 160%;
+  font-weight: 600;
+  width: calc(100% - 2rem);
+  margin-bottom: 1rem;
+  line-height: 0.8rem;
+  padding: 0;
+}
+
+.form-item-input-container {
+  background-color: var(--orange-l01);
+  border-radius: 6px 3rem 3rem 6px;
+  padding: 3%;
+  min-height: 2rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 1rem;
+  border: 2px solid var(--orange-l01);
+}
+.form-item-input-container:has(.form-item_input:focus) {
+  outline: 4px auto -webkit-focus-ring-color;
+  outline-offset: 3px;
+}
+.form-item_input {
+  flex-grow: 3;
+  max-width: calc(91% - 1rem);
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  color: var(--brown-pal);
+}
+::-webkit-input-placeholder,
+input::placeholder {
+  color: var(--brown-l01);
+  font-size: 16px;
+  font-weight: 400;
+}
+.validation-icon {
+  width: 6%;
+  max-height: 100px;
+  transform-origin: bottom;
+  display: none;
+}
+
+/* .form-item {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-content: flex-end;
+  height: 2.8rem;
+  column-gap: 1rem;
+  margin: 1rem 0;
+} */
+/* VALIDACION */
+
+.form-item_input:valid {
+  font-weight: 450;
+}
+.form-item-input-container:has(.form-item_input:invalid) {
+  border: 2px solid #ce0707;
+}
+.form-item_input:not(:placeholder-shown):invalid,
+.form-item_input:not(:-webkit-input-placeholder):invalid {
+  border-bottom: 2px solid var(--brown-pal);
+  color: var(--brown-dark);
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+input:placeholder-shown + .validation-icon {
+  display: none;
+  max-height: 0%;
+  transform-origin: bottom;
+}
+
+input:not(placeholder-shown):valid + .validation-icon {
+  display: block;
+  max-height: 100%;
+  transform-origin: bottom;
+  filter: invert(31%) sepia(87%) saturate(1125%) hue-rotate(147deg)
+    brightness(94%) contrast(99%);
+  animation: rebotePerro 0.3s ease-in-out;
+}
+input:not(:placeholder-shown):invalid + .validation-icon {
+  display: block;
+  max-height: 100%;
+  transform-origin: bottom;
+  filter: invert(9%) sepia(94%) saturate(5713%) hue-rotate(5deg)
+    brightness(101%) contrast(108%);
+  animation: sacudePerro 1s ease-in-out alternate infinite 0s, 4s, 1s;
+}
+
+@keyframes rebotePerro {
+  0% {
+    transform: scaleY(0) scaleX(0.1) translateY(0px);
+  }
+  50% {
+    transform: scaleX(0.5) translateY(-15px);
+  }
+  61%,
+  100% {
+    transform: scaleY(1) scaleX(1) translateY(0px);
+  }
+  80% {
+    transform: scaleY(0.5) translateY(-3px);
+  }
+}
+@keyframes sacudePerro {
+  0% {
+    transform: translateX(0px);
+    filter: blur(0px) invert(9%) sepia(94%) saturate(5713%) hue-rotate(5deg)
+      brightness(101%) contrast(108%);
+    /* invert(9%) sepia(94%) saturate(5713%) hue-rotate(5deg) brightness(101%) contrast(108%); */
+  }
+  4% {
+    transform: translateX(-5px) rotate(-5deg) matrix(0.7, 0, 0, 1, 0, 0);
+    filter: brightness(113%) hue-rotate(158deg) saturate(1000%) contrast(860%);
+    -webkit-filter: brightness(113%) hue-rotate(158deg) saturate(1000%)
+      contrast(860%);
+    -moz-filter: brightness(113%) hue-rotate(158deg) saturate(1000%)
+      contrast(860%);
+  }
+  8% {
+    transform: translateX(3px) rotate(3deg) matrix(0.7, 0, 0, 1, 0, 0);
+    filter: blur(2px) invert(9%) sepia(94%) saturate(5713%) hue-rotate(5deg)
+      brightness(101%) contrast(108%);
+  }
+  12% {
+    transform: translateX(0px);
+    filter: blur(0px) invert(9%) sepia(94%) saturate(5713%) hue-rotate(5deg)
+      brightness(101%) contrast(108%);
+  }
+  61%,
+  100% {
+    transform: translateX(0px);
+    filter: blur(0px) invert(9%) sepia(94%) saturate(5713%) hue-rotate(5deg)
+      brightness(101%) contrast(108%);
+  }
+  80% {
+    transform: translateX(0px);
+    filter: blur(0px) invert(9%) sepia(94%) saturate(5713%) hue-rotate(5deg)
+      brightness(101%) contrast(108%);
+  }
+}
+.toolTip-container {
+  height: 18px;
+}
+p.small {
+  font-size: 12px;
+  color: #6b1a0c;
+}
