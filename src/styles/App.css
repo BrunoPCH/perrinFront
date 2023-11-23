@@ -7,7 +7,7 @@
   text-align: center;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: stretch;
+  justify-content: flex-start;
   position: relative;
   box-sizing: border-box;
 
