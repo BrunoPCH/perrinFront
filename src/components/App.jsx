@@ -22,12 +22,17 @@ function App() {
       <Routes>
         <Route element={<LayoutWithoutHeader />}>
           <Route path="/" exact element={<Home />} />
+          {/* PARA EFECTOS DE EXPOSICION SE QUITARON */}
+          {/* <Route path="/login" exact element={<Login />} />
+          <Route path="*" element={<NotFound />} />
+          <Route path="/register" element={<Register />} /> */}
+        </Route>
+        <Route element={<LayoutWithHeader />}>
+          <Route path="/register-dog" element={<RegisterDog />} />
           <Route path="/login" exact element={<Login />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/register-dog" element={<RegisterDog />} />
         </Route>
-        <Route element={<LayoutWithHeader />}></Route>
       </Routes>
       {/* <Footer /> */}
     </BrowserRouter>
