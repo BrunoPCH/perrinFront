@@ -1,0 +1,27 @@
+.movilmenu-container {
+  /* min-height: calc(100vh - 85px); */
+  width: 100%;
+  z-index: 1000;
+  position: absolute;
+  top: 85px;
+  transform-origin: top;
+  transition: all 1s ease;
+}
+
+.movilemenu-content {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.movilmenu-item {
+  flex-basis: 100%;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  border-bottom: solid var(--yellow-pal);
+  color: var(--yellow-pal);
+  background-color: var(--brown-pal);
+}
