@@ -36,7 +36,7 @@ const Register = () => {
   return (
     <div>
       <h1>Registro</h1>
-      <h2>Llena los campos correctamete</h2>
+      <h2>Llena los campos correctamente</h2>
       <form onSubmit={handleForm} className="formulario_registro_usuario">
         <div className="form-item">
           <label htmlFor="username">Usuario*</label>
