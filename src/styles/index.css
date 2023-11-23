@@ -90,9 +90,7 @@ button.primaryBtn {
   transition: border-color 0.25s;
   margin: 1rem;
 }
-form {
-  margin: 4rem auto;
-}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: var(--brown-dark-pal);
