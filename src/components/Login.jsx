@@ -26,7 +26,9 @@ const Login = () => {
     })
       .then((response) => response.json())
       .then((data) => {
+        localStorage.setItem("token", data.jwt);
         console.log(data);
+        console.log(localStorage);
       });
   }
 
