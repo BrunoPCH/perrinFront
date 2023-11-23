@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div>
       <Logo />
-      <BookingButton to={"/login"} children={"Reservar"} />
+      <BookingButton to={"/login"}>Reservar</BookingButton>
     </div>
   );
 };
