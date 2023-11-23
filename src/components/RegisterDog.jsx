@@ -44,7 +44,7 @@ const RegisterDog = () => {
   }
 
   return (
-    <div>
+    <div style={{ padding: "0 1rem" }}>
       {/* 
   age: Joi.number().max(60).required(),
   breed: Joi.string().max(20).required(),

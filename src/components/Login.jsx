@@ -33,7 +33,7 @@ const Login = () => {
   }
 
   return (
-    <>
+    <div style={{ padding: "0 1rem" }}>
       <h1>Inicia sesión</h1>
       <h2>
         Ingresa con tu cuenta <em>Perrona</em>
@@ -129,7 +129,7 @@ const Login = () => {
         a tus perrines
       </h3>
       <ButtonLink to="/register">Crear cuenta perrona</ButtonLink>
-    </>
+    </div>
   );
 };
 export default Login;

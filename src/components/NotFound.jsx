@@ -2,7 +2,7 @@ import perrinOlfateando from "../assets/perrinOlfateando.svg";
 import ButtonLink from "./ButtonLink";
 const NotFound = () => {
   return (
-    <div>
+    <div style={{ padding: "0 1rem" }}>
       <h1>Error 404 </h1>
       <img
         src={perrinOlfateando}

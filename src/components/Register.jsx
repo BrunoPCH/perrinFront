@@ -34,7 +34,7 @@ const Register = () => {
   }
 
   return (
-    <div>
+    <div style={{ padding: "0 1rem" }}>
       <h1>Registro</h1>
       <h2>Llena los campos correctamente</h2>
       <form onSubmit={handleForm} className="formulario_registro_usuario">
