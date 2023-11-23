@@ -14,6 +14,7 @@ import Home from "./Home.jsx";
 import Login from "./Login.jsx";
 import NotFound from "./NotFound.jsx";
 import Register from "./Register.jsx";
+import RegisterDog from "./RegisterDog.jsx";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/login" exact element={<Login />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/register-dog" element={<RegisterDog />} />
         </Route>
         <Route element={<LayoutWithHeader />}></Route>
       </Routes>
