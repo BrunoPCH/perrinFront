@@ -107,3 +107,8 @@ form {
     border: solid 4px var(--yellow-pal);
   }
 }
+input:autofill,
+input:defined,
+input:-webkit-autofill {
+  background-color: none !important;
+}
