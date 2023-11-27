@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "../styles/MovilMenu.css";
+import toggleShowMenuFn from "./Header";
 
 const rutes = [
   { page: "Home", path: "/", id: 1 },
@@ -7,9 +8,14 @@ const rutes = [
   { page: "Registrar", path: "/register", id: 2 },
   { page: "Registrar Perrin", path: "/register-dog", id: 3 },
 ];
-const MovilMenu = () => {
+const MovilMenu = (toggleShowMenuFn) => {
   const ruteItems = rutes.map((rute) => (
-    <Link key={rute.id} className="movilmenu-item" to={rute.path}>
+    <Link
+      key={rute.id}
+      className="movilmenu-item"
+      to={rute.path}
+      onClick={toggleShowMenuFn}
+    >
       {rute.page}
     </Link>
   ));
