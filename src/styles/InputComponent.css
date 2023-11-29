@@ -81,13 +81,15 @@ input::placeholder {
   font-size: 1rem;
 }
 
-input:placeholder-shown + .validation-icon {
+input:placeholder-shown + .validation-icon,
+select:placeholder-shown + .validation-icon {
   display: none;
   max-height: 0%;
   transform-origin: bottom;
 }
 
-input:not(placeholder-shown):valid + .validation-icon {
+input:not(placeholder-shown):valid + .validation-icon,
+select:not(placeholder-shown):valid + .validation-icon {
   display: block;
   max-height: 100%;
   transform-origin: bottom;
@@ -95,7 +97,8 @@ input:not(placeholder-shown):valid + .validation-icon {
     brightness(94%) contrast(99%);
   animation: rebotePerro 0.3s ease-in-out;
 }
-input:not(:placeholder-shown):invalid + .validation-icon {
+input:not(:placeholder-shown):invalid + .validation-icon,
+select:not(:placeholder-shown):invalid + .validation-icon {
   display: block;
   max-height: 100%;
   transform-origin: bottom;
@@ -162,4 +165,43 @@ input:not(:placeholder-shown):invalid + .validation-icon {
 p.small {
   font-size: 12px;
   color: #6b1a0c;
+}
+
+input:autofill,
+input:defined,
+input:-webkit-autofill {
+  background-color: none !important;
+}
+/* Desaparece flechas del input number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+/* Quita la aparencia del autocomplete */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  background: none;
+  /* -webkit-text-fill-color: green; */
+  /* -webkit-box-shadow: 0 0 0px 1000px #000 inset; */
+  transition: background-color 5000s ease-in-out 0s;
+}
+.input-selector {
+  width: 100%;
+  background: none;
+  outline: none;
+  border: none;
+  color: var(--brown-l01);
+  font-size: 16px;
+  font-weight: 400;
 }

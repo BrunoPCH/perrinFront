@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../styles/InputComponent.css";
 
 import validationIcon from "../assets/validationIcon.svg";
 
