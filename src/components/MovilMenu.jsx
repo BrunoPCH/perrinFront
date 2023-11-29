@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import "../styles/MovilMenu.css";
-import toggleShowMenuFn from "./Header";
 
 const rutes = [
   { page: "Home", path: "/", id: 1 },
