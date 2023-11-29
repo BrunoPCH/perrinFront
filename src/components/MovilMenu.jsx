@@ -7,13 +7,13 @@ const rutes = [
   { page: "Registrar", path: "/register", id: 2 },
   { page: "Registrar Perrin", path: "/register-dog", id: 3 },
 ];
-const MovilMenu = (toggleShowMenuFn) => {
+const MovilMenu = () => {
   const ruteItems = rutes.map((rute) => (
     <Link
       key={rute.id}
       className="movilmenu-item"
       to={rute.path}
-      onClick={toggleShowMenuFn}
+      // onClick={toggleShowMenuFn}
     >
       {rute.page}
     </Link>
