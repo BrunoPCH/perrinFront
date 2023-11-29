@@ -1,12 +1,12 @@
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
+import "../styles/InputComponent.css";
 import validationIcon from "../assets/validationIcon.svg";
 
 const RegisterDog = () => {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
-  // const [breed, setBreed] = useState("");
-  // const [vaccinated, setVaccinated] = useState("");
+  const [breed, setBreed] = useState(null);
+  const [vaccinated, setVaccinated] = useState("");
   // const [unfriendly_dog, setUnfriendly_dog] = useState("");
   // const [weight, setWeights] = useState("");
   // const [has_allergies, setHas_allergies] = useState("");
@@ -19,8 +19,8 @@ const RegisterDog = () => {
     let userData = {
       name: name,
       age: age,
-      // breed: breed,
-      // vaccinated: vaccinated,
+      breed: selectedBreed,
+      vaccinated: vaccinated,
       // unfriendly_dog: unfriendly_dog,
       // weight: weight,
       // has_allergies: has_allergies,
@@ -42,6 +42,21 @@ const RegisterDog = () => {
         console.log(data);
       });
   }
+  const [breeds, setBreeds] = useState([]);
+  const [selectedBreed, setSelectedBreed] = useState(null);
+
+  function handleChange(event) {
+    setSelectedBreed(event.target.value);
+  }
+
+  useEffect(() => {
+    // invocar api dogbreeds
+    // get para API dogbreeds
+    fetch("https://perrin-api2.onrender.com/dog-breeds")
+      .then((response) => response.json())
+
+      .then((data) => setBreeds(data.map((breed) => breed)));
+  }, []);
 
   return (
     <div style={{ padding: "0 1rem" }}>
@@ -97,7 +112,7 @@ const RegisterDog = () => {
           </div>
         </div>
         <div>
-          <div className="form-item" style={{ width: "48%" }}>
+          <div className="form-item">
             <label htmlFor="age">Edad*</label>
             <div className="form-item-input-container">
               <input
@@ -134,10 +149,11 @@ const RegisterDog = () => {
               )}
             </div>
           </div>
-          {/* <div className="form-item" style={{ width: "48%" }}>
+          <div className="form-item">
             <label htmlFor="vaccinated">Vacunación vigente</label>
             <div className="form-item-input-container">
               <select
+                className="input-selector"
                 id="vaccinated"
                 name="vaccinated"
                 required
@@ -145,42 +161,68 @@ const RegisterDog = () => {
                 onChange={(e) => setVaccinated(e.target.value)}
                 defaultValue={true}
               >
-                <option value={"True"}>Si</option>
-                <option value={"False"}>No</option>
+                <option value={true}>Si</option>
+                <option value={false}>No</option>
               </select>
-            </div> */}
-
-          {/* <fieldset>
-              <input
-                className="form-item_input"
-                type="radio"
-                id="vaccinated"
-                name="vaccinated"
-                required
-                onSelect={() => setShow(true)}
-                onChange={(e) => setAge(e.target.value)}
-              />
               <img
                 className="validation-icon"
                 src={validationIcon}
                 alt="Icono de validación de campo"
               />
-            </fieldset> */}
-        </div>
-        <div className="toolTip-container">
-          {show ? (
-            <p
-              className="small"
-              style={{ opacity: "1", transition: "all .5s ease-in-out" }}
-            >
-              Años
-            </p>
-          ) : (
-            <p
-              className="small"
-              style={{ opacity: "0", transition: "all .5s ease-in-out" }}
-            ></p>
-          )}
+            </div>
+            <div className="toolTip-container">
+              {show ? (
+                <p
+                  className="small"
+                  style={{ opacity: "1", transition: "all .5s ease-in-out" }}
+                >
+                  Contesta Si o No
+                </p>
+              ) : (
+                <p
+                  className="small"
+                  style={{ opacity: "0", transition: "all .5s ease-in-out" }}
+                ></p>
+              )}
+            </div>
+          </div>
+          <div className="form-item">
+            <label htmlFor="breed">Raza</label>
+            <div className="form-item-input-container">
+              <select
+                className="input-selector"
+                id="breed"
+                name="breed"
+                required
+                // onSelect={() => setShow(true)}
+                onChange={handleChange}
+              >
+                {breeds.map((breed) => (
+                  <option value={breed.breed}>{breed.breed}</option>
+                ))}
+              </select>
+              <img
+                className="validation-icon"
+                src={validationIcon}
+                alt="Icono de validación de campo"
+              />
+            </div>
+            <div className="toolTip-container">
+              {show ? (
+                <p
+                  className="small"
+                  style={{ opacity: "1", transition: "all .5s ease-in-out" }}
+                >
+                  Selecciona la raza segun la FCI
+                </p>
+              ) : (
+                <p
+                  className="small"
+                  style={{ opacity: "0", transition: "all .5s ease-in-out" }}
+                ></p>
+              )}
+            </div>
+          </div>
         </div>
 
         <button type="submit">Crear perrin</button>
