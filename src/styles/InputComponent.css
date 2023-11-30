@@ -3,6 +3,14 @@
   width: 100%;
   text-align: left;
 }
+.form-item-hide {
+  margin: 1.5rem 0;
+  width: 100%;
+  text-align: left;
+  transform: scaleY(0);
+  transform-origin: top;
+  display: none;
+}
 label,
 ::-webkit-input-placeholder,
 input::placeholder {
@@ -204,4 +212,32 @@ select:-webkit-autofill:focus {
   color: var(--brown-l01);
   font-size: 16px;
   font-weight: 400;
+}
+select option:checked {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--brown-dark-pal);
+}
+
+.creciendo {
+  transform: scaleY(1);
+  animation: all 1s ease-out;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+@keyframes creciendo {
+  0% {
+    transform: scaleY(1);
+  }
+  1% {
+    transform: scaleY(0);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
 }
