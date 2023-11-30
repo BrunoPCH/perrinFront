@@ -3,6 +3,7 @@ import MovilMenu from "./MovilMenu";
 import "../styles/Header.css";
 import logoImage from "../assets/perrinLogoHeader.svg";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -22,8 +23,13 @@ const Header = () => {
           </button>
         </div>
       </div>
-      <div className="">{showMenu ? <MovilMenu /> : <></>}</div>
+      <div className="">
+        {showMenu ? <MovilMenu setShowMenu={setShowMenu} /> : <></>}
+      </div>
     </div>
   );
+};
+Header.protoTypes = {
+  setShowMenu: PropTypes.element,
 };
 export default Header;

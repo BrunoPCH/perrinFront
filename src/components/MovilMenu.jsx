@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "../styles/MovilMenu.css";
+import PropTypes from "prop-types";
 
 const rutes = [
   { page: "Home", path: "/", id: 1 },
@@ -7,12 +8,13 @@ const rutes = [
   { page: "Registrar", path: "/register", id: 2 },
   { page: "Registrar Perrin", path: "/register-dog", id: 3 },
 ];
-const MovilMenu = () => {
+const MovilMenu = (props) => {
   const ruteItems = rutes.map((rute) => (
     <Link
       key={rute.id}
       className="movilmenu-item"
       to={rute.path}
+      onClick={() => props.setShowMenu(false)}
       // onClick={toggleShowMenuFn}
     >
       {rute.page}
@@ -26,5 +28,7 @@ const MovilMenu = () => {
     </div>
   );
 };
-
+MovilMenu.protoTypes = {
+  setShowMenu: PropTypes.element,
+};
 export default MovilMenu;
