@@ -1,9 +1,11 @@
-footer {
+footer,
+Footer {
   width: 100%;
   background-color: var(--yellow-pal);
-  height: 60px;
-
+  min-height: 80px;
   display: block;
-
-  margin-top: 10rem;
+  margin-top: 3rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  position: relative;
 }

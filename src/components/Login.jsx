@@ -33,7 +33,14 @@ const Login = () => {
   }
 
   return (
-    <div style={{ padding: "0 1rem" }}>
+    <div
+      style={{
+        padding: "0 1rem",
+        flexGrow: "1",
+        flexBasis: "80%",
+        minHeight: "80vh",
+      }}
+    >
       <h1>Inicia sesión</h1>
       <h2>
         Ingresa con tu cuenta <em>Perrona</em>

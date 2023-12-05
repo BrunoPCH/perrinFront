@@ -43,11 +43,9 @@ a:hover {
 
 body {
   margin: 0 auto;
-  display: flex;
-
   min-width: 200px;
-  min-height: 100vh;
   max-width: 100%;
+  padding: 0;
 }
 
 h1 {

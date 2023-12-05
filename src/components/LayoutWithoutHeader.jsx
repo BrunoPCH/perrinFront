@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 const LayoutWithoutHeader = () => {
   return (
-    <div className="">
+    <div style={{}}>
       <Outlet />
       <Footer />
     </div>

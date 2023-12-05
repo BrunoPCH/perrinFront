@@ -8,8 +8,9 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  position: relative;
   box-sizing: border-box;
+  padding-bottom: 0;
+  position: relative;
 
   --orange-pal: #d96326;
   --yellow-pal: #f29d35;
