@@ -1,0 +1,14 @@
+.button-register-dog button {
+  width: 50px;
+  display: block;
+  position: absolute;
+  bottom: 7rem;
+  right: 1rem;
+  z-index: 9999;
+  width: 75px;
+  font-size: 40px;
+  padding: 0;
+  line-height: 0;
+  text-align: center;
+  aspect-ratio: 1/1;
+}

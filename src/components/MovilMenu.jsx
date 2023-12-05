@@ -7,6 +7,7 @@ const rutes = [
   { page: "Login", path: "/login", id: 4 },
   { page: "Registrar", path: "/register", id: 2 },
   { page: "Registrar Perrin", path: "/register-dog", id: 3 },
+  { page: "Dashboard", path: "/dashboard", id: 4 },
 ];
 const MovilMenu = (props) => {
   const ruteItems = rutes.map((rute) => (
